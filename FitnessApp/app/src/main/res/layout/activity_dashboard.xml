@@ -1,0 +1,58 @@
+<!-- res/layout/activity_dashboard.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9E9E9E"
+    android:text="Dan's Fitness App"
+    android:textColor="#FFFFFF"
+    android:gravity="center"
+    android:padding="20dp"
+    android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvHeader">
+
+        <Button
+            android:id="@+id/btnViewWorkoutLog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Workout Log"
+            android:background="#757575"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnSetGoals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set Goals"
+            android:background="#757575"
+        android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvStepCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Steps: 0"
+        android:gravity="center"
+        android:padding="20dp"
+        android:background="#BDBDBD"
+    android:textColor="#333333"
+    android:textSize="18sp"/>
+
+</RelativeLayout>
