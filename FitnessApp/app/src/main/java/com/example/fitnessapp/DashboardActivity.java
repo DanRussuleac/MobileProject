@@ -25,6 +25,7 @@ public class DashboardActivity extends AppCompatActivity implements SensorEventL
 
         tvStepCounter = findViewById(R.id.tvStepCounter);
         Button btnViewWorkoutLog = findViewById(R.id.btnViewWorkoutLog);
+        Button btnSetGoals = findViewById(R.id.btnSetGoals); // The button for setting goals
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
@@ -37,6 +38,11 @@ public class DashboardActivity extends AppCompatActivity implements SensorEventL
 
         btnViewWorkoutLog.setOnClickListener(view -> {
             Intent intent = new Intent(DashboardActivity.this, WorkoutLogActivity.class);
+            startActivity(intent);
+        });
+
+        btnSetGoals.setOnClickListener(view -> {
+            Intent intent = new Intent(DashboardActivity.this, GoalsAchievementsActivity.class);
             startActivity(intent);
         });
     }

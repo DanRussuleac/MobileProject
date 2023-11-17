@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/Background">
+
+    <ListView
+        android:id="@+id/lvWorkoutLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/btnAddWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Workout"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_rounded"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

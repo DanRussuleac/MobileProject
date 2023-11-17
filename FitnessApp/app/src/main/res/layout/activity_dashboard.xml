@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0E0E0">
+    android:background="@color/Background">
 
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9E9E9E"
+        android:background="@color/dark_fitness_blue"
     android:text="Dan's Fitness App"
     android:textColor="#FFFFFF"
     android:gravity="center"
@@ -22,13 +22,15 @@
         android:orientation="horizontal"
         android:layout_below="@id/tvHeader">
 
+
+
         <Button
             android:id="@+id/btnViewWorkoutLog"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Workout Log"
-            android:background="#757575"
+            android:background="#949494"
             android:textColor="#FFFFFF"/>
 
         <Button
@@ -39,6 +41,8 @@
             android:text="Set Goals"
             android:background="#757575"
         android:textColor="#FFFFFF"/>
+
+
 
     </LinearLayout>
 
@@ -51,8 +55,8 @@
         android:text="Steps: 0"
         android:gravity="center"
         android:padding="20dp"
-        android:background="#BDBDBD"
-    android:textColor="#333333"
+        android:background="@color/fitness_blue"
+    android:textColor="#FFFFFF"
     android:textSize="18sp"/>
 
 </RelativeLayout>
