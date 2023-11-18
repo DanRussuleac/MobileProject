@@ -8,7 +8,7 @@ public class HealthScoreActivity extends AppCompatActivity {
 
     private TextView tvHealthScore;
     private int steps;
-    private double distance; // Distance in kilometers
+    private double distance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,6 @@ public class HealthScoreActivity extends AppCompatActivity {
 
         tvHealthScore = findViewById(R.id.tvHealthScore);
 
-        // Retrieve steps and distance from intent or shared preferences
-        // For demonstration, we'll use static values
         steps = 10000; // Example step count
         distance = 5; // Example distance in kilometers
 
@@ -26,8 +24,7 @@ public class HealthScoreActivity extends AppCompatActivity {
     }
 
     private void calculateHealthScore() {
-        // Placeholder for your health score calculation logic
-        // For instance, you might decide that 10,000 steps and 8 km is a 100% score
+        // Will try use gps and database to calculate healthscore, for no static based on distance etc
         int score = (int) ((steps / 10000.0 + distance / 8.0) / 2 * 100);
 
         tvHealthScore.setText(String.format("Health Score: %d%%", score));

@@ -1,4 +1,4 @@
-package     com.example.fitnessapp;
+package com.example.fitnessapp;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -19,8 +19,6 @@ public class GoalsAchievementsActivity extends AppCompatActivity {
 
         lvGoals = findViewById(R.id.lvGoals);
         goalsList = new ArrayList<>();
-        // Populate your list with existing goals, from a database
-        // For demonstration, ill add some placeholder items
         goalsList.add("Run 5K");
         goalsList.add("15 Minutes Stretching");
         goalsList.add("Drink 2L of Water");

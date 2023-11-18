@@ -26,8 +26,7 @@ public class WorkoutLogActivity extends AppCompatActivity {
         lvWorkoutLog.setAdapter(workoutAdapter);
 
         btnAddWorkout.setOnClickListener(view -> {
-            // Intent to start an activity to add a new workout
-            // For now, we'll just add a placeholder string to the list
+            // For now, I'll just add a placeholder string to the list
             workoutList.add("Workout " + (workoutList.size() + 1));
             workoutAdapter.notifyDataSetChanged();
         });
@@ -37,7 +36,7 @@ public class WorkoutLogActivity extends AppCompatActivity {
     }
 
     private void loadWorkouts() {
-        // TODO: Implement loading of workouts from the database or local storage
-        // This is where you would query your database and add the items to your 'workoutList', then notify the adapter
+        // TODO: Implement loading of workouts from the database
+
     }
 }
