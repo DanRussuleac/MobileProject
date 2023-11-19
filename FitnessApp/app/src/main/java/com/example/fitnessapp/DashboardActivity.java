@@ -25,7 +25,7 @@ public class DashboardActivity extends AppCompatActivity implements SensorEventL
 
         tvStepCounter = findViewById(R.id.tvStepCounter);
         Button btnViewWorkoutLog = findViewById(R.id.btnViewWorkoutLog);
-        Button btnSetGoals = findViewById(R.id.btnSetGoals); // The button for setting goals
+        Button btnSetGoals = findViewById(R.id.btnSetGoals);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
@@ -73,6 +73,6 @@ public class DashboardActivity extends AppCompatActivity implements SensorEventL
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        // Can be used to respond to changes in sensor accuracy, if needed
+        // Can be used to respond to changes in sensor accuracy
     }
 }
