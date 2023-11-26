@@ -46,9 +46,13 @@ public class LoginActivity extends AppCompatActivity {
         loginForm = findViewById(R.id.loginForm);
         registerForm = findViewById(R.id.registerForm);
 
-        // Initialize Room database
+        // Initialize Room database with migration
         db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class, "database-name").allowMainThreadQueries().build();
+                        AppDatabase.class, "database-name")
+                .fallbackToDestructiveMigration()
+                .allowMainThreadQueries()
+                .build();
+
 
         // Set up register button register button listener
         buttonGoToLogin.setOnClickListener(v -> {

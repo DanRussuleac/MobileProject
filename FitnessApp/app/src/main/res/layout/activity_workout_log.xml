@@ -16,6 +16,21 @@
         android:clipToPadding="false"
         android:scrollbars="vertical"/>
 
+    <!-- Add EditText fields for muscle and exercises input -->
+    <EditText
+        android:id="@+id/etMuscle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Muscle"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/etExercises"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exercises"
+        android:layout_marginTop="16dp"/>
+
     <Button
         android:id="@+id/btnAddWorkout"
         android:layout_width="match_parent"

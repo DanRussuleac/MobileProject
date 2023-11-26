@@ -21,9 +21,6 @@ public class User {
         this.password = password;
     }
 
-    // No-arg constructor incase it's needed
-    public User() {
-    }
 }
 
 

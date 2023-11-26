@@ -39,6 +39,10 @@
             android:name=".HealthScoreActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".EditWorkoutActivity"
+            android:exported="true" />
+
         <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
