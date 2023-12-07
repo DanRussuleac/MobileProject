@@ -23,6 +23,9 @@ public class DashboardActivity extends AppCompatActivity implements SensorEventL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        Intent serviceIntent = new Intent(this, StepCounterService.class);
+        startService(serviceIntent);
+
         tvStepCounter = findViewById(R.id.tvStepCounter);
         Button btnViewWorkoutLog = findViewById(R.id.btnViewWorkoutLog);
         Button btnSetGoals = findViewById(R.id.btnSetGoals);
