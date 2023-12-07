@@ -10,4 +10,6 @@
     <color name="light_fitness_grey">#78909C</color> <!-- A light grey-blue that's easy on the eyes -->
     <color name="lighter_fitness_blue">#5A6ABE</color>
     <color name="Background">#CECECE</color>
+    <color name="completed_goal_color">#00FF00</color>
+    <color name="default_goal_color">#000000</color>
 </resources>

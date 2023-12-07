@@ -50,7 +50,7 @@ public class StepCounterService extends Service implements SensorEventListener {
         Notification notification = new Notification.Builder(this, channelId)
                 .setContentTitle("Step Counter Active")
                 .setContentText("Counting your steps.")
-                .setSmallIcon(R.drawable.ic_launcher_foreground) // Use your own drawable icon
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentIntent(pendingIntent)
                 .build();
 
