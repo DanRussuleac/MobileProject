@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="@color/Background">
 
-    <!-- Header TextView -->
+    <!-- Header text displaying the app's title -->
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:padding="20dp"
         android:textSize="20sp"/>
 
-    <!-- Navigation Bar LinearLayout -->
+    <!-- Horizontal navigation bar with buttons for different features -->
     <LinearLayout
         android:id="@+id/navigationBar"
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
         android:orientation="horizontal"
         android:layout_below="@id/tvHeader">
 
+        <!-- Button for accessing the workout log -->
         <Button
             android:id="@+id/btnViewWorkoutLog"
             android:layout_width="0dp"
@@ -32,6 +33,7 @@
             android:background="#949494"
             android:textColor="#FFFFFF"/>
 
+        <!-- Button for setting fitness goals -->
         <Button
             android:id="@+id/btnSetGoals"
             android:layout_width="0dp"
@@ -42,12 +44,7 @@
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- ProgressBar for Step Counter -->
-
-    <!-- TextView for Step Progress Percentage -->
-
-    <!-- Step Counter TextView -->
-
+    <!-- Horizontal progress bar for step counter -->
     <ProgressBar
         android:id="@+id/pbStepProgress"
         style="?android:attr/progressBarStyleHorizontal"
@@ -59,6 +56,7 @@
         android:progress="0"
         android:progressDrawable="@drawable/progress_bar_horizontal" />
 
+    <!-- Text displaying step progress percentage -->
     <TextView
         android:id="@+id/tvStepProgressPercentage"
         android:layout_width="match_parent"
@@ -70,6 +68,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
+    <!-- Text displaying the current step count -->
     <TextView
         android:id="@+id/tvStepCounter"
         android:layout_width="match_parent"

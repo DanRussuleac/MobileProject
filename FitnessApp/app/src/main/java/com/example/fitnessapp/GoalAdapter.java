@@ -12,19 +12,20 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.core.content.ContextCompat;
-
 import com.example.fitnessapp.database.AppDatabase;
 import com.example.fitnessapp.database.entities.GoalsLog;
-
 import java.util.List;
 
+/**
+ * GoalAdapter: Custom ArrayAdapter for displaying and managing goals in a ListView.
+ */
 public class GoalAdapter extends ArrayAdapter<GoalsLog> {
     private List<GoalsLog> goalsList;
     private Context mContext;
     private AppDatabase db;
 
+    // Constructor
     public GoalAdapter(Context context, List<GoalsLog> goals, AppDatabase db) {
         super(context, 0, goals);
         this.mContext = context;
@@ -34,51 +35,52 @@ public class GoalAdapter extends ArrayAdapter<GoalsLog> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        // Inflate the custom layout for each item in the list
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_goal, parent, false);
         }
 
+        // Bind the views from the custom layout
         TextView tvGoalText = convertView.findViewById(R.id.tvGoalText);
         CheckBox chkGoal = convertView.findViewById(R.id.chkGoal);
         ImageView imgDelete = convertView.findViewById(R.id.imgDelete);
 
+        // Get the current goal item
         GoalsLog goal = getItem(position);
 
         if (goal != null) {
+            // Set goal text and completion status
             tvGoalText.setText(goal.getGoalText());
             chkGoal.setChecked(goal.isCompleted());
 
-            // Set the checkbox color when checked
+            // Customize checkbox color on modern Android versions
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 chkGoal.setButtonTintList(ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.dark_fitness_blue)));
             }
 
-            // Update text color based on completion status
-            if (goal.isCompleted()) {
-                tvGoalText.setTextColor(Color.GREEN); // For completed goals
-            } else {
-                tvGoalText.setTextColor(Color.BLACK); // For incomplete goals
-            }
+            // Change text color based on completion status
+            tvGoalText.setTextColor(goal.isCompleted() ? Color.GREEN : Color.BLACK);
 
+            // Set listener for checkbox changes
             chkGoal.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 goal.setCompleted(isChecked);
-                new Thread(() -> db.goalsLogDao().update(goal)).start(); // Update in database
-                notifyDataSetChanged(); // Refresh the list view
+                new Thread(() -> db.goalsLogDao().update(goal)).start(); // Update goal in the database
+                notifyDataSetChanged(); // Refresh the adapter
             });
 
-            imgDelete.setOnClickListener(v -> {
-                deleteGoal(goal, position);
-            });
+            // Set listener for delete button
+            imgDelete.setOnClickListener(v -> deleteGoal(goal, position));
         }
 
         return convertView;
     }
 
+    // Method to delete a goal
     private void deleteGoal(GoalsLog goal, int position) {
         new Thread(() -> {
-            db.goalsLogDao().delete(goal);
-            goalsList.remove(position);
-            ((Activity) mContext).runOnUiThread(this::notifyDataSetChanged);
+            db.goalsLogDao().delete(goal); // Delete goal from the database
+            goalsList.remove(position); // Remove goal from the list
+            ((Activity) mContext).runOnUiThread(this::notifyDataSetChanged); // Notify the UI thread
         }).start();
     }
 }

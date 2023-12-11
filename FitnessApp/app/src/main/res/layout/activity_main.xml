@@ -4,6 +4,7 @@
     android:background="@color/Background"
     android:padding="16dp">
 
+    <!-- ImageView for displaying the app's logo -->
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="269dp"
@@ -12,6 +13,7 @@
         android:layout_marginTop="60dp"
         android:src="@drawable/homepage" />
 
+    <!-- TextView for displaying the app's name -->
     <TextView
         android:id="@+id/tvAppName"
         android:layout_width="wrap_content"
@@ -23,6 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 
+    <!-- LinearLayout to contain and organize buttons vertically -->
     <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
@@ -31,6 +34,7 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
+        <!-- Button to navigate to the Dashboard -->
         <Button
             android:id="@+id/btnGoToDashboard"
             android:layout_width="match_parent"
@@ -40,6 +44,7 @@
             android:elevation="4dp"
             android:text="Dashboard" />
 
+        <!-- Button to navigate to the Workout Log -->
         <Button
             android:id="@+id/btnGoToWorkoutLog"
             android:layout_width="match_parent"
@@ -49,6 +54,7 @@
             android:elevation="4dp"
             android:text="Workout Log" />
 
+        <!-- Button to navigate to Goals and Achievements -->
         <Button
             android:id="@+id/btnGoToGoals"
             android:layout_width="match_parent"
@@ -58,6 +64,7 @@
             android:elevation="4dp"
             android:text="Goals and Achievements" />
 
+        <!-- Button to navigate to Health Score -->
         <Button
             android:id="@+id/btnGoToHealthScore"
             android:layout_width="match_parent"

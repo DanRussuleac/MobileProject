@@ -2,12 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="dark_grey">#424242</color> <!-- A nice dark grey -->
-    <color name="darker_grey">#212121</color> <!-- An even darker shade of grey -->
-    <color name="your_accent_color">#FF4081</color> <!-- Replace with your actual accent color -->
-    <color name="fitness_blue">#304FFE</color> <!-- A vibrant blue -->
-    <color name="dark_fitness_blue">#1E40AF</color> <!-- A darker shade of blue for contrast -->
-    <color name="light_fitness_grey">#78909C</color> <!-- A light grey-blue that's easy on the eyes -->
+    <color name="dark_grey">#424242</color>
+    <color name="darker_grey">#212121</color>
+    <color name="pink">#FF4081</color>
+    <color name="fitness_blue">#304FFE</color>
+    <color name="dark_fitness_blue">#1E40AF</color>
+    <color name="light_fitness_grey">#78909C</color>
     <color name="lighter_fitness_blue">#5A6ABE</color>
     <color name="Background">#CECECE</color>
     <color name="completed_goal_color">#00FF00</color>

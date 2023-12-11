@@ -1,11 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.FitnessApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/fitness_blue</item>
-        <item name="colorPrimaryDark">@color/dark_fitness_blue</item>
-        <item name="colorAccent">@color/your_accent_color</item>
 
+        <!-- Primary brand color used throughout the app -->
+        <item name="colorPrimary">@color/fitness_blue</item>
+
+        <!-- Darker variant of the primary color, used for status bar, app bar, etc. -->
+        <item name="colorPrimaryDark">@color/dark_fitness_blue</item>
+
+        <!-- Accent color used for UI elements like buttons, active state, etc. -->
+        <item name="colorAccent">@color/pink</item>
+
+        <!-- StatusBarColor customization -->
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/dark_fitness_blue</item>
+
+        <!-- NavigationBarColor customization  -->
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/fitness_blue</item>
     </style>
 

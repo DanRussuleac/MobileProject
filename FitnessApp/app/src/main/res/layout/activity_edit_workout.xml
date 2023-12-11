@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- EditText for entering the muscle group -->
     <EditText
         android:id="@+id/etMuscle"
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         android:hint="Muscle group"
         android:inputType="text"/>
 
+    <!-- EditText for entering exercises, supporting multiline text -->
     <EditText
         android:id="@+id/etExercises"
         android:layout_width="match_parent"
@@ -20,12 +22,14 @@
         android:hint="Exercises"
         android:inputType="textMultiLine"/>
 
+    <!-- Button to save the entered workout details -->
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save Changes"/>
 
+    <!-- Button to delete the current workout -->
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"

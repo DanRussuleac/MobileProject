@@ -48,6 +48,7 @@
             android:name=".HealthScoreActivity"
             android:exported="true" />
 
+        <!-- Edit Workout Activity -->
         <activity
             android:name=".EditWorkoutActivity"
             android:exported="true" />

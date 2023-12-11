@@ -5,6 +5,7 @@
     android:padding="16dp"
     android:background="@color/Background">
 
+    <!-- ListView to display workout logs -->
     <ListView
         android:id="@+id/lvWorkoutLog"
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:clipToPadding="false"
         android:scrollbars="vertical"/>
 
-    <!-- Add EditText fields for muscle and exercises input -->
+    <!-- EditText for inputting the muscle group -->
     <EditText
         android:id="@+id/etMuscle"
         android:layout_width="match_parent"
@@ -24,6 +25,7 @@
         android:hint="Muscle"
         android:layout_marginTop="16dp"/>
 
+    <!-- EditText for inputting exercises -->
     <EditText
         android:id="@+id/etExercises"
         android:layout_width="match_parent"
@@ -31,6 +33,7 @@
         android:hint="Exercises"
         android:layout_marginTop="16dp"/>
 
+    <!-- Button for adding a new workout entry -->
     <Button
         android:id="@+id/btnAddWorkout"
         android:layout_width="match_parent"

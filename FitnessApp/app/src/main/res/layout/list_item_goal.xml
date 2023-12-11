@@ -5,11 +5,13 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
+    <!-- CheckBox to indicate the completion status of a goal -->
     <CheckBox
         android:id="@+id/chkGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!-- TextView for displaying the goal's text -->
     <TextView
         android:id="@+id/tvGoalText"
         android:layout_width="0dp"
@@ -19,6 +21,7 @@
         android:textSize="16sp"
         android:paddingStart="8dp"/>
 
+    <!-- ImageView serving as a delete button for the goal -->
     <ImageView
         android:id="@+id/imgDelete"
         android:layout_width="32dp"
